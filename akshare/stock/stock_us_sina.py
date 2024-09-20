@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 """
-Date: 2023/8/17 15:00
+Date: 2023/12/7 15:30
 Desc: 新浪财经-美股实时行情数据和历史行情数据
 https://finance.sina.com.cn/stock/usstock/sector.shtml
 """
+
 import json
 from functools import lru_cache
 
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup
-from py_mini_racer import py_mini_racer
+import py_mini_racer
 from tqdm import tqdm
 
 from akshare.stock.cons import (
@@ -43,7 +43,7 @@ def __get_us_page_count() -> int:
         us_sina_stock_list_url.format(dict_list),
         params=us_sina_stock_dict_payload,
     )
-    data_json = json.loads(res.text[res.text.find("({") + 1: res.text.rfind(");")])
+    data_json = json.loads(res.text[res.text.find("({") + 1 : res.text.rfind(");")])
     if not isinstance(int(data_json["count"]) / 20, int):
         page_count = int(int(data_json["count"]) / 20) + 1
     else:
@@ -128,9 +128,7 @@ def stock_us_daily(symbol: str = "FB", adjust: str = "") -> pd.DataFrame:
     res = requests.get(url)
     js_code = py_mini_racer.MiniRacer()
     js_code.eval(zh_js_decode)
-    dict_list = js_code.call(
-        "d", res.text.split("=")[1].split(";")[0].replace('"', "")
-    )
+    dict_list = js_code.call("d", res.text.split("=")[1].split(";")[0].replace('"', ""))
     data_df = pd.DataFrame(dict_list)
     data_df["date"] = pd.to_datetime(data_df["date"]).dt.date
     data_df.index = pd.to_datetime(data_df["date"])
@@ -157,7 +155,7 @@ def stock_us_daily(symbol: str = "FB", adjust: str = "") -> pd.DataFrame:
     new_range = pd.merge(
         temp_df, qfq_factor_df, left_index=True, right_index=True, how="left"
     )
-    new_range = new_range.fillna(method="ffill")
+    new_range = new_range.ffill()
     new_range = new_range.iloc[:, [1, 2]]
 
     if adjust == "qfq":
@@ -169,21 +167,21 @@ def stock_us_daily(symbol: str = "FB", adjust: str = "") -> pd.DataFrame:
         try:
             # try for pandas >= 2.1.0
             temp_df.ffill(inplace=True)
-        except Exception as e:
+        except Exception:
             try:
-            # try for pandas < 2.1.0          
+                # try for pandas < 2.1.0
                 temp_df.fillna(method="ffill", inplace=True)
             except Exception as e:
                 print("Error:", e)
         try:
             # try for pandas >= 2.1.0
             temp_df.bfill(inplace=True)
-        except Exception as e:
+        except Exception:
             try:
-            # try for pandas < 2.1.0          
+                # try for pandas < 2.1.0
                 temp_df.fillna(method="bfill", inplace=True)
             except Exception as e:
-                print("Error:", e)        
+                print("Error:", e)
 
         temp_df = temp_df.astype(float)
         temp_df["open"] = temp_df["open"] * temp_df["qfq_factor"] + temp_df["adjust"]
@@ -212,61 +210,6 @@ def stock_us_daily(symbol: str = "FB", adjust: str = "") -> pd.DataFrame:
         return data_df
 
 
-def stock_us_fundamental(stock: str = "GOOGL", symbol: str = "info") -> pd.DataFrame:
-    """
-    美股财务指标
-    https://www.macrotrends.net/stocks/stock-screener
-    :param stock: 美股 ticker, 可以通过调用 **ak.stock_us_fundamental(symbol="info")** 获取所有 ticker
-    :type stock: str
-    :param symbol: info: 返回所有美股列表, PE: 返回 PE 数据, PB: 返回 PB 数据
-    :type symbol: str
-    :return: 指定股票的财务数据
-    :rtype: pandas.DataFrame
-    """
-    url = "https://www.macrotrends.net/stocks/stock-screener"
-    headers = {
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
-    }
-    r = requests.get(url, headers=headers)
-    temp_text = r.text[
-        r.text.find("originalData") + 15 : r.text.find("filterArray") - 8
-    ]
-    data_json = json.loads(temp_text)
-    temp_df = pd.DataFrame(data_json)
-    if symbol == "info":
-        del temp_df["name_link"]
-        return temp_df
-    else:
-        headers = {
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
-        }
-        need_df = temp_df[temp_df["ticker"] == stock]
-        soup = BeautifulSoup(need_df["name_link"].values[0], "lxml")
-        base_url = "https://www.macrotrends.net" + soup.find("a")["href"]
-        if symbol == "PE":
-            url = base_url.rsplit("/", maxsplit=1)[0] + "/pe-ratio"
-            r = requests.get(url, headers=headers)
-            temp_df = pd.read_html(r.text)[0]
-            temp_df.columns = [
-                "date",
-                "stock_price",
-                "ttm_net_eps",
-                "pe_ratio",
-            ]
-            return temp_df
-        elif symbol == "PB":
-            url = base_url.rsplit("/", maxsplit=1)[0] + "/price-book"
-            r = requests.get(url, headers=headers)
-            temp_df = pd.read_html(r.text)[0]
-            temp_df.columns = [
-                "date",
-                "stock_price",
-                "book_value_per_share",
-                "price_to_book_ratio",
-            ]
-            return temp_df
-
-
 if __name__ == "__main__":
     stock_us_stock_name_df = get_us_stock_name()
     print(stock_us_stock_name_df)
@@ -282,9 +225,3 @@ if __name__ == "__main__":
 
     stock_us_daily_qfq_factor_df = stock_us_daily(symbol="AAPL", adjust="qfq-factor")
     print(stock_us_daily_qfq_factor_df)
-
-    stock_us_fundamental_df = stock_us_fundamental(symbol="info")
-    print(stock_us_fundamental_df)
-
-    stock_us_fundamental_df = stock_us_fundamental(stock="GOOGL", symbol="PB")
-    print(stock_us_fundamental_df)
