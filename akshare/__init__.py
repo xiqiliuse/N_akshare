@@ -2889,9 +2889,22 @@ amac_manager_cancelled_info # 中国证券投资基金业协会-信息公示-诚
 1.14.76 fix: fix stock_sy_em interface
 1.14.77 fix: fix stock_zh_b_daily interface
 1.14.78 fix: fix stock_analyst_rank_em interface
+1.14.79 add: add stock_zcfz_bj_em interface
+1.14.80 fix: fix stock_hot_rank_wc interface
+1.14.81 fix: fix stock_hsgt_hist_em interface
+1.14.82 fix: fix stock_comment_detail_scrd_desire_daily_em interface
+1.14.83 fix: fix stock_comment_detail_zhpj_lspf_em interface
+1.14.84 fix: fix drewry_wci_index interface
+1.14.85 fix: fix stock_profit_forecast_em interface
+1.14.86 fix: fix stock_comment_detail_scrd_focus_em interface
+1.14.87 fix: fix stock_hot_search_baidu interface
+1.14.88 fix: fix stock_hot_rank_relate_em interface
+1.14.89 fix: fix bond_spot_deal interface
+1.14.90 fix: fix stock_board_change_em interface
+1.14.91 fix: fix stock_history_dividend interface
 """
 
-__version__ = "1.14.78"
+__version__ = "1.14.91"
 __author__ = "AKFamily"
 
 import sys
@@ -4112,6 +4125,7 @@ from akshare.stock_fundamental.stock_ipo_declare import stock_ipo_declare
 """
 from akshare.stock_feature.stock_report_em import (
     stock_zcfz_em,
+    stock_zcfz_bj_em,
     stock_lrb_em,
     stock_xjll_em,
 )

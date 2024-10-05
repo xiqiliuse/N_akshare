@@ -80,6 +80,59 @@
 
 ## 更新说明详情
 
+1.14.91 fix: fix stock_history_dividend interface
+
+    1. 修复 stock_history_dividend 接口
+
+1.14.90 fix: fix stock_board_change_em interface
+
+    1. 修复 stock_board_change_em 接口
+
+1.14.89 fix: fix bond_spot_deal interface
+
+    1. 修复 bond_spot_deal 接口
+    2. 修复 fund_open_fund_info_em 接口
+
+1.14.88 fix: fix stock_hot_rank_relate_em interface
+
+    1. 修复 stock_hot_rank_relate_em 接口
+
+1.14.87 fix: fix stock_hot_search_baidu interface
+
+    1. 修复 stock_hot_search_baidu 接口
+
+1.14.86 fix: fix stock_comment_detail_scrd_focus_em interface
+
+    1. 修复 stock_comment_detail_scrd_focus_em 接口
+
+1.14.85 fix: fix stock_profit_forecast_em interface
+
+    1. 修复 stock_profit_forecast_em 接口
+
+1.14.84 fix: fix drewry_wci_index interface
+
+    1. 修复 drewry_wci_index 接口
+
+1.14.83 fix: fix stock_comment_detail_zhpj_lspf_em interface
+
+    1. 修复 stock_comment_detail_zhpj_lspf_em 接口
+
+1.14.82 fix: fix stock_comment_detail_scrd_desire_daily_em interface
+
+    1. 修复 stock_comment_detail_scrd_desire_daily_em 接口
+
+1.14.81 fix: fix stock_hsgt_hist_em interface
+
+    1. 修复 stock_hsgt_hist_em 接口
+
+1.14.80 fix: fix stock_hot_rank_wc interface
+
+    1. 修复 stock_hot_rank_wc 接口
+
+1.14.79 add: add stock_zcfz_bj_em interface
+
+    1. 新增 stock_zcfz_bj_em 接口
+
 1.14.78 fix: fix stock_analyst_rank_em interface
 
     1. 修复 stock_analyst_rank_em 接口
@@ -4553,6 +4606,32 @@
     3. 修改 air_quality_hist 接口的请求日期格式，从 '2022-01-01' 为 '20220101'
 
 ## 版本更新说明
+
+1.14.91 fix: fix stock_history_dividend interface
+
+1.14.90 fix: fix stock_board_change_em interface
+
+1.14.89 fix: fix bond_spot_deal interface
+
+1.14.88 fix: fix stock_hot_rank_relate_em interface
+
+1.14.87 fix: fix stock_hot_search_baidu interface
+
+1.14.86 fix: fix stock_comment_detail_scrd_focus_em interface
+
+1.14.85 fix: fix stock_profit_forecast_em interface
+
+1.14.84 fix: fix drewry_wci_index interface
+
+1.14.83 fix: fix stock_comment_detail_zhpj_lspf_em interface
+
+1.14.82 fix: fix stock_comment_detail_scrd_desire_daily_em interface
+
+1.14.81 fix: fix stock_hsgt_hist_em interface
+
+1.14.80 fix: fix stock_hot_rank_wc interface
+
+1.14.79 add: add stock_zcfz_bj_em interface
 
 1.14.78 fix: fix stock_analyst_rank_em interface
 
