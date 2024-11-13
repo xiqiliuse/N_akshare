@@ -21,7 +21,7 @@ import pandas as pd
 import requests
 
 
-def stock_zt_pool_em(date: str = "20231129") -> pd.DataFrame:
+def stock_zt_pool_em(date: str = "20241008") -> pd.DataFrame:
     """
     东方财富网-行情中心-涨停板行情-涨停股池
     https://quote.eastmoney.com/ztb/detail#type=ztgc
@@ -186,7 +186,7 @@ def stock_zt_pool_previous_em(date: str = "20240415") -> pd.DataFrame:
     return temp_df
 
 
-def stock_zt_pool_strong_em(date: str = "20231129") -> pd.DataFrame:
+def stock_zt_pool_strong_em(date: str = "20241009") -> pd.DataFrame:
     """
     东方财富网-行情中心-涨停板行情-强势股池
     https://quote.eastmoney.com/ztb/detail#type=qsgc
@@ -264,7 +264,7 @@ def stock_zt_pool_strong_em(date: str = "20231129") -> pd.DataFrame:
     return temp_df
 
 
-def stock_zt_pool_sub_new_em(date: str = "20231129") -> pd.DataFrame:
+def stock_zt_pool_sub_new_em(date: str = "20241011") -> pd.DataFrame:
     """
     东方财富网-行情中心-涨停板行情-次新股池
     https://quote.eastmoney.com/ztb/detail#type=cxgc
@@ -345,7 +345,7 @@ def stock_zt_pool_sub_new_em(date: str = "20231129") -> pd.DataFrame:
     return temp_df
 
 
-def stock_zt_pool_zbgc_em(date: str = "20231129") -> pd.DataFrame:
+def stock_zt_pool_zbgc_em(date: str = "20241011") -> pd.DataFrame:
     """
     东方财富网-行情中心-涨停板行情-炸板股池
     https://quote.eastmoney.com/ztb/detail#type=zbgc
@@ -428,7 +428,7 @@ def stock_zt_pool_zbgc_em(date: str = "20231129") -> pd.DataFrame:
     return temp_df
 
 
-def stock_zt_pool_dtgc_em(date: str = "20231129") -> pd.DataFrame:
+def stock_zt_pool_dtgc_em(date: str = "20241011") -> pd.DataFrame:
     """
     东方财富网-行情中心-涨停板行情-跌停股池
     https://quote.eastmoney.com/ztb/detail#type=dtgc
@@ -516,20 +516,20 @@ def stock_zt_pool_dtgc_em(date: str = "20231129") -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    stock_zt_pool_em_df = stock_zt_pool_em(date="20240801")
+    stock_zt_pool_em_df = stock_zt_pool_em(date="20241008")
     print(stock_zt_pool_em_df)
 
     stock_zt_pool_previous_em_df = stock_zt_pool_previous_em(date="20240415")
     print(stock_zt_pool_previous_em_df)
 
-    stock_zt_pool_strong_em_df = stock_zt_pool_strong_em(date="20240424")
+    stock_zt_pool_strong_em_df = stock_zt_pool_strong_em(date="20241009")
     print(stock_zt_pool_strong_em_df)
 
-    stock_zt_pool_sub_new_em_df = stock_zt_pool_sub_new_em(date="20240424")
+    stock_zt_pool_sub_new_em_df = stock_zt_pool_sub_new_em(date="20241011")
     print(stock_zt_pool_sub_new_em_df)
 
-    stock_zt_pool_zbgc_em_df = stock_zt_pool_zbgc_em(date="20240424")
+    stock_zt_pool_zbgc_em_df = stock_zt_pool_zbgc_em(date="20241011")
     print(stock_zt_pool_zbgc_em_df)
 
-    stock_zt_pool_dtgc_em_df = stock_zt_pool_dtgc_em(date="20240424")
+    stock_zt_pool_dtgc_em_df = stock_zt_pool_dtgc_em(date="20241011")
     print(stock_zt_pool_dtgc_em_df)

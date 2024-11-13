@@ -2902,9 +2902,37 @@ amac_manager_cancelled_info # 中国证券投资基金业协会-信息公示-诚
 1.14.89 fix: fix bond_spot_deal interface
 1.14.90 fix: fix stock_board_change_em interface
 1.14.91 fix: fix stock_history_dividend interface
+1.14.92 add: add qdii_a_index_jsl interface
+1.14.93 fix: fix stock_zt_pool_em interface
+1.14.94 fix: fix stock_zt_pool_strong_em interface
+1.14.95 fix: fix stock_zt_pool_sub_new_em interface
+1.14.96 fix: fix stock_zt_pool_sub_new_em interface
+1.14.97 fix: fix stock_profile_cninfo interface
+1.14.98 fix: fix futures_hold_pos_sina interface
+1.14.99 fix: fix stock_a_ttm_lyr interface
+1.15.1 fix: fix stock_a_all_pb interface
+1.15.2 fix: fix stock_index_pe_lg interface
+1.15.3 fix: fix stock_share_change_cninfo interface
+1.15.4 fix: fix stock_allotment_cninfo interface
+1.15.5 fix: fix stock_individual_spot_xq interface
+1.15.6 fix: fix qdii_e_index_jsl interface
+1.15.7 fix: fix index_hist_sw interface
+1.15.8 fix: fix fund_individual_basic_info_xq interface
+1.15.9 fix: fix index_analysis_weekly_sw interface
+1.15.10 add: add volatility_yz_rv indicator
+1.15.11 fix: fix stock_individual_spot_xq indicator
+1.15.12 fix: fix stock_shareholder_change_ths indicator
+1.15.13 fix: fix stock_inner_trade_xq indicator
+1.15.14 fix: fix macro_bank_usa_interest_rate indicator
+1.15.15 add: add macro_bank_china_interest_rate indicator
+1.15.16 fix: fix macro_bank_usa_interest_rate indicator
+1.15.17 fix: fix news_trade_notify_dividend_baidu indicator
+1.15.18 fix: fix stock_share_hold_change_sse indicator
+1.15.19 fix: fix stock_share_hold_change_szse indicator
+1.15.20 fix: fix rv_from_stock_zh_a_hist_min_em indicator
 """
 
-__version__ = "1.14.91"
+__version__ = "1.15.20"
 __author__ = "AKFamily"
 
 import sys
@@ -2925,6 +2953,16 @@ if sys.version_info < (3, 9):
     )
 
 del sys
+
+"""
+已实现波动率
+"""
+from akshare.cal.rv import volatility_yz_rv, rv_from_futures_zh_minute_sina, rv_from_stock_zh_a_hist_min_em
+
+"""
+QDII
+"""
+from akshare.qdii.qdii_jsl import qdii_a_index_jsl, qdii_e_index_jsl, qdii_e_comm_jsl
 
 """
 财新网-财新数据通
@@ -3176,6 +3214,8 @@ from akshare.stock_fundamental.stock_finance_ths import (
     stock_financial_debt_ths,
     stock_financial_benefit_ths,
     stock_financial_cash_ths,
+    stock_management_change_ths,
+    stock_shareholder_change_ths,
 )
 
 """
@@ -3445,17 +3485,6 @@ from akshare.stock_feature.stock_hot_xq import (
     stock_hot_deal_xq,
     stock_hot_follow_xq,
     stock_hot_tweet_xq,
-)
-
-"""
-南华期货-板块指数涨跌
-南华期货-品种指数涨跌
-南华期货-相关系数矩阵
-"""
-from akshare.futures_derivative.futures_other_index_nh import (
-    futures_correlation_nh,
-    futures_board_index_nh,
-    futures_variety_index_nh,
 )
 
 """
@@ -4143,6 +4172,7 @@ from akshare.stock_feature.stock_board_industry_ths import (
     stock_board_industry_info_ths,
     stock_board_industry_index_ths,
     stock_ipo_benefit_ths,
+    stock_xgsr_ths,
 )
 
 """
@@ -4815,6 +4845,7 @@ from akshare.economic.macro_bank import (
     macro_bank_australia_interest_rate,
     macro_bank_brazil_interest_rate,
     macro_bank_brazil_interest_rate,
+    macro_bank_china_interest_rate,
     macro_bank_english_interest_rate,
     macro_bank_euro_interest_rate,
     macro_bank_india_interest_rate,
@@ -4952,20 +4983,6 @@ from akshare.index.index_sw import (
 经济政策不确定性指数
 """
 from akshare.article.epu_index import article_epu_index
-
-"""
-南华期货-南华指数
-"""
-from akshare.futures_derivative.futures_index_return_nh import (
-    futures_return_index_nh,
-)
-from akshare.futures_derivative.futures_index_price_nh import (
-    futures_price_index_nh,
-    futures_index_symbol_table_nh,
-)
-from akshare.futures_derivative.futures_index_volatility_nh import (
-    futures_volatility_index_nh,
-)
 
 """
 空气-河北
@@ -5385,6 +5402,18 @@ from akshare.fund.fund_xq import (
     fund_individual_profit_probability_xq,
     fund_individual_detail_info_xq,
     fund_individual_detail_hold_xq,
+)
+
+"""
+异常处理模块
+"""
+from .exceptions import (
+    AkshareException,
+    APIError,
+    DataParsingError,
+    InvalidParameterError,
+    NetworkError,
+    RateLimitError,
 )
 
 """

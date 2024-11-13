@@ -80,6 +80,137 @@
 
 ## 更新说明详情
 
+1.15.20 fix: fix rv_from_stock_zh_a_hist_min_em indicator
+
+    1. 修复 rv_from_stock_zh_a_hist_min_em 接口
+
+1.15.19 fix: fix stock_share_hold_change_szse indicator
+
+    1. 修复 stock_share_hold_change_szse 接口
+
+1.15.18 fix: fix stock_share_hold_change_sse indicator
+
+    1. 修复 stock_share_hold_change_sse 接口
+
+1.15.17 fix: fix news_trade_notify_dividend_baidu indicator
+
+    1. 修复 news_trade_notify_dividend_baidu 接口
+
+1.15.16 fix: fix macro_bank_usa_interest_rate indicator
+
+    1. 修复 macro_bank_usa_interest_rate 接口
+
+1.15.15 add: add macro_bank_china_interest_rate indicator
+
+    1. 新增 macro_bank_china_interest_rate 接口
+
+1.15.14 fix: fix macro_bank_usa_interest_rate indicator
+
+    1. 修复 macro_bank_usa_interest_rate 接口
+    2. 修复 macro_bank_euro_interest_rate 接口
+    3. 修复 macro_bank_newzealand_interest_rate 接口
+    4. 修复 macro_bank_switzerland_interest_rate 接口
+    5. 修复 macro_bank_english_interest_rate 接口
+    6. 修复 macro_bank_australia_interest_rate 接口
+    7. 修复 macro_bank_japan_interest_rate 接口
+    8. 修复 macro_bank_russia_interest_rate 接口
+    9. 修复 macro_bank_india_interest_rate 接口
+    10. 修复 macro_bank_brazil_interest_rate 接口
+    11. 修复 index_value_hist_funddb 接口
+
+1.15.13 fix: fix stock_inner_trade_xq indicator
+
+    1. 修复 stock_inner_trade_xq 接口
+    2. 新增 stock_management_change_ths 接口
+
+1.15.12 fix: fix stock_shareholder_change_ths indicator
+
+    1. 修复 stock_shareholder_change_ths 接口
+
+1.15.11 fix: fix stock_individual_spot_xq indicator
+
+    1. 修复 stock_individual_spot_xq 接口
+    2. 新增 stock_shareholder_change_ths 接口
+
+1.15.10 add: add volatility_yz_rv indicator
+
+    1. 新增 volatility_yz_rv 指标
+
+1.15.9 fix: fix index_analysis_weekly_sw interface
+
+    1. 修复 index_analysis_weekly_sw 接口
+
+1.15.8 fix: fix fund_individual_basic_info_xq interface
+
+    1. 修复 fund_individual_basic_info_xq 接口
+
+1.15.7 fix: fix index_hist_sw interface
+
+    1. 修复 index_hist_sw 接口
+
+1.15.6 fix: fix qdii_e_index_jsl interface
+
+    1. 修复 qdii_e_index_jsl 接口
+
+1.15.5 fix: fix stock_individual_spot_xq interface
+
+    1. 修复 stock_individual_spot_xq 接口
+
+1.15.4 fix: fix stock_allotment_cninfo interface
+
+    1. 修复 stock_allotment_cninfo 接口
+
+1.15.3 fix: fix stock_share_change_cninfo interface
+
+    1. 修复 stock_share_change_cninfo 接口
+
+1.15.2 fix: fix stock_index_pe_lg interface
+
+    1. 修复 stock_index_pe_lg 接口
+
+1.15.1 fix: fix stock_a_all_pb interface
+
+    1. 修复 stock_a_all_pb 接口
+
+1.14.99 fix: fix stock_a_ttm_lyr interface
+
+    1. 修复 stock_a_ttm_lyr 接口
+
+1.14.98 fix: fix futures_hold_pos_sina interface
+
+    1. 修复 futures_hold_pos_sina 接口
+
+1.14.97 fix: fix stock_profile_cninfo interface
+
+    1. 修复 stock_profile_cninfo 接口
+    2. 移除南华指数相关接口
+
+1.14.96 fix: fix stock_zt_pool_sub_new_em interface
+
+    1. 修复 stock_zt_pool_sub_new_em 接口
+    2. 修复 stock_individual_spot_xq 接口
+    3. 新增 stock_xgsr_ths 接口
+
+1.14.95 fix: fix stock_zt_pool_sub_new_em interface
+
+    1. 修复 stock_zt_pool_sub_new_em 接口
+
+1.14.94 fix: fix stock_zt_pool_strong_em interface
+
+    1. 修复 stock_zt_pool_strong_em 接口
+
+1.14.93 fix: fix stock_zt_pool_em interface
+
+    1. 修复 stock_zt_pool_em 接口
+
+1.14.92 add: add qdii_a_index_jsl interface
+
+    1. 新增 qdii_a_index_jsl 接口
+    2. 新增 qdii_e_index_jsl 接口
+    3. 新增 qdii_e_comm_jsl 接口
+    4. 修复 stock_individual_spot_xq 接口
+    5. 修复 option_czce_daily 接口
+
 1.14.91 fix: fix stock_history_dividend interface
 
     1. 修复 stock_history_dividend 接口
@@ -4606,6 +4737,62 @@
     3. 修改 air_quality_hist 接口的请求日期格式，从 '2022-01-01' 为 '20220101'
 
 ## 版本更新说明
+
+1.15.20 fix: fix rv_from_stock_zh_a_hist_min_em indicator
+
+1.15.19 fix: fix stock_share_hold_change_szse indicator
+
+1.15.18 fix: fix stock_share_hold_change_sse indicator
+
+1.15.17 fix: fix news_trade_notify_dividend_baidu indicator
+
+1.15.16 fix: fix macro_bank_usa_interest_rate indicator
+
+1.15.15 add: add macro_bank_china_interest_rate indicator
+
+1.15.14 fix: fix macro_bank_usa_interest_rate indicator
+
+1.15.13 fix: fix stock_inner_trade_xq indicator
+
+1.15.12 fix: fix stock_shareholder_change_ths indicator
+
+1.15.11 fix: fix stock_individual_spot_xq indicator
+
+1.15.10 add: add volatility_yz_rv indicator
+
+1.15.9 fix: fix index_analysis_weekly_sw interface
+
+1.15.8 fix: fix fund_individual_basic_info_xq interface
+
+1.15.7 fix: fix index_hist_sw interface
+
+1.15.6 fix: fix qdii_e_index_jsl interface
+
+1.15.5 fix: fix stock_individual_spot_xq interface
+
+1.15.4 fix: fix stock_allotment_cninfo interface
+
+1.15.3 fix: fix stock_share_change_cninfo interface
+
+1.15.2 fix: fix stock_index_pe_lg interface
+
+1.15.1 fix: fix stock_a_all_pb interface
+
+1.14.99 fix: fix stock_a_ttm_lyr interface
+
+1.14.98 fix: fix futures_hold_pos_sina interface
+
+1.14.97 fix: fix stock_profile_cninfo interface
+
+1.14.96 fix: fix stock_zt_pool_sub_new_em interface
+
+1.14.95 fix: fix stock_zt_pool_sub_new_em interface
+
+1.14.94 fix: fix stock_zt_pool_strong_em interface
+
+1.14.93 fix: fix stock_zt_pool_em interface
+
+1.14.92 add: add qdii_a_index_jsl interface
 
 1.14.91 fix: fix stock_history_dividend interface
 

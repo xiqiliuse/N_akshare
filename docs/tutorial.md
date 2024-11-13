@@ -133,12 +133,6 @@
  "weather_monthly"  # 每月日出和日落数据
  # 河北空气质量数据(期货-钢铁)
  "air_quality_hebei"  # 河北空气质量数据
- # 南华期货-南华指数-波动率指数
- "futures_volatility_index_nh"  # 波动率指数
- # 南华期货-南华指数-价格指数
- "futures_price_index_nh"  # 价格指数
- # 南华期货-南华指数-收益率指数
- "futures_return_index_nh"  # 收益率指数
  # 经济政策不确定性(EPU)指数
  "article_epu_index"  # 主要国家和地区的经济政策不确定性(EPU)指数
  # 申万行业指数
@@ -897,6 +891,7 @@
  "stock_hsgt_individual_detail_em"  # 沪深港通持股-具体股票-详情
  # IPO 受益股
  "stock_ipo_benefit_ths"  # IPO 受益股
+ "stock_xgsr_ths"  # 新股上市首日
  # 同花顺-数据中心-技术选股-创新高
  "stock_rank_cxg_ths"  # 创新高
  "stock_rank_cxd_ths"  # 创新低
@@ -1036,10 +1031,6 @@
  # 可转债溢价率分析和可转债价值分析
  "bond_zh_cov_value_analysis"  # 可转债溢价率分析
  "bond_zh_cov_value_analysis"  # 可转债价值分析
- # 南华期货
- "futures_correlation_nh"  # 相关系数矩阵
- "futures_board_index_nh"  # 板块指数涨跌
- "futures_variety_index_nh"  # 品种指数涨跌
  # 股票热度-雪球
  "stock_hot_follow_xq"  # 雪球-沪深股市-热度排行榜-关注排行榜
  "stock_hot_tweet_xq"  # 雪球-沪深股市-热度排行榜-讨论排行榜
@@ -1285,6 +1276,16 @@
  "spot_mixed_feed_soozhu"  # 搜猪-生猪大数据-全国育肥猪合料（含自配料）半月走势
  # 财新网-财新数据通
  "stock_news_main_cx"  # 财新网-财新数据通
+ # QDII
+ "qdii_e_index_jsl"  # 集思录-T+0 QDII-欧美市场-欧美指数
+ "qdii_e_comm_jsl"  # 集思录-T+0 QDII-欧美市场-商品
+ "qdii_a_index_jsl"  # 集思录-T+0 QDII-亚洲市场-亚洲指数
+ # 同花顺-公司大事-股东持股变动
+ "stock_shareholder_change_ths"  # 同花顺-公司大事-股东持股变动
+ "stock_management_change_ths"  # 同花顺-公司大事-高管持股变动
+
+ # 计算指标
+ "volatility_yz_rv"  # 已实现波动率计算
 ```
 
 ## 案例演示
