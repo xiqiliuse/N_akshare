@@ -1,15 +1,13 @@
-**欢迎加入专注于财经数据和量化投资的知识社区，请点击[了解更多](https://akshare.akfamily.xyz/learn.html)**
+**欢迎加入专注于财经数据和量化投资的知识社区，获取《AKShare-财经数据宝典》，其汇集了财经数据的使用经验和指南，还独家分享了
+众多国内外财经数据源的使用和注意事项，请点击[了解更多](https://akshare.akfamily.xyz/learn.html)**。
 
-**首门量化投资教程：《PyBroker-入门及实战》已经录制完成，目前已经上架！**
+**量化投研视频课程：《PyBroker-入门及实战》已经上架！《PyBroker-进阶及实战》正在更新！**
 
 **更多视频教程已经发布：《AKShare-初阶-使用教学》、《AKShare-初阶-实战应用》、《AKShare-源码解析》、《开源项目巡礼》**，
 详情请关注【数据科学实战】公众号，查看更多课程信息！
 
-**AKQuant 量化教程请访问：[利用 PyBroker 进行量化投资](https://akquant.akfamily.xyz/)**
-
-**本次发布 [AKTools](https://github.com/akfamily/aktools) 作为 AKShare 的 HTTP API 版本，
-突破 Python 语言的限制，欢迎各位小伙伴试用并提出更好的意见或建议！
-点击 [AKTools](https://github.com/akfamily/aktools) 查看使用指南。另外提供 [awesome-data](https://github.com/akfamily/awesome-data) 方便各位小伙伴查询各种数据源。**
+**广告推广**：期魔方是一款非常专业本地化期货量化终端，无需部署或搭建环境，可直接调用及时和历史数据做回测实盘，
+支持开箱即用的机器学习训练，策略投研、回测均免费，详情请[访问期魔方官网](https://qmfquant.com)。
 
 ![AKShare Logo](https://github.com/akfamily/akshare/blob/main/assets/images/akshare_logo.jpg)
 
@@ -217,13 +215,9 @@ Special thanks [TuShare](https://github.com/waditu/tushare) for the opportunity 
 
 Thanks for the data provided by [生意社网站](http://www.100ppi.com/);
 
-Thanks for the data provided by [奇货可查网站](https://qhkch.com/);
-
 Thanks for the data provided by [中国银行间市场交易商协会网站](http://www.nafmii.org.cn/);
 
 Thanks for the data provided by [99期货网站](http://www.99qh.com/);
-
-Thanks for the data provided by [英为财情网站](https://cn.investing.com/);
 
 Thanks for the data provided by [中国外汇交易中心暨全国银行间同业拆借中心网站](http://www.chinamoney.com.cn/chinese/);
 
@@ -232,8 +226,6 @@ Thanks for the data provided by [金十数据网站](https://www.jin10.com/);
 Thanks for the data provided by [和讯财经网站](http://www.hexun.com/);
 
 Thanks for the data provided by [新浪财经网站](https://finance.sina.com.cn/);
-
-Thanks for the data provided by [Oxford-Man Institute 网站](https://realized.oxford-man.ox.ac.uk/);
 
 Thanks for the data provided by [DACHENG-XIU 网站](https://dachxiu.chicagobooth.edu/);
 
@@ -261,12 +253,6 @@ Thanks for the data provided by [南华期货网站](http://www.nanhua.net/nhzc/
 
 Thanks for the data provided by [Economic Policy Uncertainty 网站](http://www.nanhua.net/nhzc/varietytrend.html);
 
-Thanks for the data provided by [微博指数网站](https://data.weibo.com/index/newindex);
-
-Thanks for the data provided by [百度指数网站](http://index.baidu.com/v2/main/index.html);
-
-Thanks for the data provided by [谷歌指数网站](https://trends.google.com/trends/?geo=US);
-
 Thanks for the data provided by [申万指数网站](http://www.swsindex.com/idx0120.aspx?columnid=8832);
 
 Thanks for the data provided by [真气网网站](https://www.zq12369.com/);
@@ -281,17 +267,11 @@ Thanks for the data provided by [北京市碳排放权电子交易平台网站](
 
 Thanks for the data provided by [国家金融与发展实验室网站](http://www.nifd.cn/);
 
-Thanks for the data provided by [IT桔子网站](https://www.itjuzi.com);
-
 Thanks for the data provided by [东方财富网站](http://data.eastmoney.com/jgdy/);
 
 Thanks for the data provided by [义乌小商品指数网站](http://www.ywindex.com/Home/Product/index/);
 
-Thanks for the data provided by [中国国家发展和改革委员会网站](http://jgjc.ndrc.gov.cn/dmzs.aspx?clmId=741);
-
 Thanks for the data provided by [百度迁徙网站](https://qianxi.baidu.com/?from=shoubai#city=0);
-
-Thanks for the data provided by [慈善中国网站](http://cishan.chinanpo.gov.cn/platform/login.html);
 
 Thanks for the data provided by [思知网站](https://www.ownthink.com/);
 
